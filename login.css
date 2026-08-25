@@ -1,0 +1,712 @@
+
+/* ==========================================
+   NEXIX — LOGIN
+   DISEÑO COMPACTO
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111111;
+    overflow: hidden;
+}
+
+/* ==========================================
+   PÁGINA PRINCIPAL
+========================================== */
+
+.login-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: #ffffff;
+}
+
+/* ==========================================
+   PANEL IZQUIERDO
+========================================== */
+
+.login-panel {
+    width: 46%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 35px;
+    overflow-y: auto;
+}
+
+.login-content {
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+}
+
+/* ==========================================
+   LOGO NEXIX
+========================================== */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 18px;
+    color: #111111;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+/* ==========================================
+   FORMULARIO
+========================================== */
+
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ==========================================
+   CABECERA
+========================================== */
+
+.heading {
+    margin-bottom: 14px;
+}
+
+.heading > span {
+    display: block;
+    margin-bottom: 5px;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.heading h1 {
+    margin-bottom: 6px;
+    color: #111111;
+    font-size: 31px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1.3px;
+}
+
+.heading p {
+    max-width: 390px;
+    color: #777777;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+/* ==========================================
+   ETIQUETAS
+========================================== */
+
+.form-container > label {
+    display: block;
+    margin-bottom: 5px;
+    color: #222222;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.form-container > input,
+.password-wrapper input {
+    width: 100%;
+    height: 43px;
+    margin-bottom: 10px;
+    padding: 0 13px;
+    border: 1px solid #d9dfe8;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.form-container > input:focus,
+.password-wrapper input:focus {
+    border-color: #5273ff;
+    box-shadow: 0 0 0 3px rgba(82, 115, 255, 0.10);
+}
+
+.form-container input::placeholder {
+    color: #a6a6a6;
+}
+
+/* ==========================================
+   PASSWORD
+========================================== */
+
+.password-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 43px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 7px;
+    top: 0;
+    width: 36px;
+    height: 43px;
+    border: 0;
+    background: transparent;
+    color: #8a94a6;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.toggle-password:hover {
+    color: #333333;
+}
+
+/* ==========================================
+   TURNSTILE
+========================================== */
+
+.cf-turnstile {
+    width: 100%;
+    min-height: 65px;
+    margin: 1px 0 7px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* ==========================================
+   BOTÓN LOGIN
+========================================== */
+
+.login-button {
+    width: 100%;
+    height: 43px;
+    border: 0;
+    border-radius: 9px;
+    background: #3155e7;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        transform 0.1s ease;
+}
+
+.login-button:hover {
+    background: #2547d4;
+}
+
+.login-button:active {
+    transform: scale(0.99);
+}
+
+.login-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   SEPARADOR
+========================================== */
+
+.divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 11px 0 9px;
+    color: #a0a0a0;
+    font-size: 10px;
+    text-align: center;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e3e3e3;
+}
+
+.divider span {
+    white-space: nowrap;
+}
+
+/* ==========================================
+   BOTONES SOCIALES
+========================================== */
+
+.social-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.social-button {
+    width: 52px;
+    height: 43px;
+    flex: 0 0 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #dfe3ea;
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.1s ease;
+}
+
+.social-button:hover {
+    background: #f7f8fa;
+    border-color: #cbd1db;
+    transform: translateY(-1px);
+}
+
+.social-button:active {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   LOGOS SOCIALES — BASE
+========================================== */
+
+.social-logo {
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   LOGIN — GOOGLE
+   26 × 26 PX
+========================================== */
+
+#googleLogin .social-logo {
+    width: 26px;
+    height: 29px;
+    object-fit: contain;
+}
+
+/* ==========================================
+   LOGIN — DISCORD
+   65 × 65 PX
+========================================== */
+
+#discordLogin .social-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+/* ==========================================
+   LOGIN — GITHUB
+   55 × 55 PX
+========================================== */
+
+#githubLogin .social-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* ==========================================
+   REGISTER — GOOGLE
+   26 × 26 PX
+========================================== */
+
+#googleRegister .social-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* ==========================================
+   REGISTER — DISCORD
+   65 × 65 PX
+========================================== */
+
+#discordRegister .social-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+/* ==========================================
+   REGISTER — GITHUB
+   55 × 55 PX
+========================================== */
+
+#githubRegister .social-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* ==========================================
+   FALLBACK PARA ICONOS ANTIGUOS
+========================================== */
+
+.social-icon {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    line-height: 1;
+}
+
+.social-icon.google {
+    color: #4285f4;
+}
+
+.social-icon.discord {
+    color: #5865f2;
+}
+
+.social-icon.github {
+    color: #111111;
+}
+
+/* ==========================================
+   REGISTRO
+========================================== */
+
+.signup-text {
+    margin-top: 3px;
+    color: #777777;
+    font-size: 11px;
+    text-align: center;
+}
+
+.signup-text a {
+    color: #3155e7;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   CONTINUAR SIN CUENTA
+========================================== */
+
+.guest-button {
+    display: block;
+    margin-top: 8px;
+    color: #999999;
+    font-size: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.guest-button:hover {
+    color: #555555;
+}
+
+/* ==========================================
+   MENSAJES
+========================================== */
+
+#loginMessage {
+    width: 100%;
+    margin: 8px 0 !important;
+    padding: 8px 10px !important;
+    border-radius: 8px;
+    font-size: 11px !important;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* ==========================================
+   PANEL DERECHO
+========================================== */
+
+.visual-panel {
+    width: 54%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d1528 0%,
+            #173e91 43%,
+            #4b2399 100%
+        );
+
+    color: #ffffff;
+}
+
+/* ==========================================
+   FONDO VISUAL
+========================================== */
+
+.visual-background {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            rgba(42, 103, 255, 0.45),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(111, 42, 255, 0.45),
+            transparent 40%
+        );
+
+    pointer-events: none;
+}
+
+/* ==========================================
+   CONTENIDO VISUAL
+========================================== */
+
+.visual-content {
+    position: relative;
+    z-index: 2;
+
+    width: 80%;
+    max-width: 600px;
+}
+
+/* ==========================================
+   SÍMBOLO
+========================================== */
+
+.nexix-symbol {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.06);
+
+    font-size: 27px;
+}
+
+/* ==========================================
+   TEXTO DERECHO
+========================================== */
+
+.visual-content h2 {
+    margin-bottom: 18px;
+
+    font-size: clamp(45px, 4.7vw, 70px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+    font-weight: 900;
+}
+
+.visual-content p {
+    max-width: 520px;
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .login-page {
+        min-height: 100vh;
+        height: auto;
+        display: block;
+    }
+
+    .login-panel {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding: 25px 20px;
+    }
+
+    .visual-panel {
+        display: none;
+    }
+
+    .login-content {
+        max-width: 430px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .login-panel {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .heading h1 {
+        font-size: 28px;
+    }
+
+    .heading p {
+        font-size: 11px;
+    }
+
+    .social-button {
+        width: 50px;
+        height: 42px;
+        flex-basis: 50px;
+    }
+
+    .cf-turnstile {
+        transform-origin: left center;
+    }
+}
+
+/* ==========================================
+   ALTURAS PEQUEÑAS
+   Evita tener que hacer scroll
+========================================== */
+
+@media (max-height: 750px) and (min-width: 901px) {
+
+    .login-panel {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        font-size: 21px;
+    }
+
+    .heading {
+        margin-bottom: 9px;
+    }
+
+    .heading h1 {
+        font-size: 27px;
+        margin-bottom: 4px;
+    }
+
+    .heading p {
+        font-size: 11px;
+    }
+
+    .form-container > input,
+    .password-wrapper input {
+        height: 39px;
+        margin-bottom: 7px;
+    }
+
+    .toggle-password {
+        height: 39px;
+    }
+
+    .cf-turnstile {
+        min-height: 58px;
+        margin: 0 0 4px;
+    }
+
+    .login-button {
+        height: 40px;
+    }
+
+    .divider {
+        margin: 8px 0 7px;
+    }
+
+    .social-button {
+        height: 39px;
+    }
+
+    .signup-text {
+        margin-top: 2px;
+    }
+
+    .guest-button {
+        margin-top: 5px;
+    }
+
+    .nexix-symbol {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 22px;
+    }
+
+    .visual-content h2 {
+        font-size: clamp(40px, 4.5vw, 62px);
+    }
+}

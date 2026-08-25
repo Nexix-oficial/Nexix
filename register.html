@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Crear cuenta - NEXIX</title>
+
+    <link
+        rel="stylesheet"
+        href="login.css"
+    >
+
+    <!-- CLOUDFLARE TURNSTILE -->
+    <script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async
+        defer>
+    </script>
+
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <!-- ==================================
+             PANEL IZQUIERDO
+        =================================== -->
+
+        <section class="login-panel">
+
+            <div class="login-content">
+
+                <!-- LOGO -->
+
+                <a
+                    href="/"
+                    class="logo"
+                >
+                    ✦ NEXIX
+                </a>
+
+
+                <!-- ==================================
+                     FORMULARIO
+                =================================== -->
+
+                <form
+                    class="form-container"
+                    id="registerForm"
+                >
+
+                    <!-- CABECERA -->
+
+                    <div class="heading">
+
+                        <span>
+                            Únete a NEXIX
+                        </span>
+
+                        <h1>
+                            Crear cuenta
+                        </h1>
+
+                        <p>
+                            Crea tu cuenta para guardar
+                            tus conversaciones y acceder
+                            a NEXIX desde cualquier
+                            dispositivo.
+                        </p>
+
+                    </div>
+
+
+                    <!-- ==================================
+                         CORREO
+                    =================================== -->
+
+                    <label for="email">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="tu@email.com"
+                        autocomplete="email"
+                        required
+                    >
+
+
+                    <!-- ==================================
+                         CONTRASEÑA
+                    =================================== -->
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="••••••••"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="toggle-password"
+                            aria-label="Mostrar contraseña"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+
+                    <!-- ==================================
+                         REPETIR CONTRASEÑA
+                    =================================== -->
+
+                    <label for="confirmPassword">
+                        Repetir contraseña
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            type="password"
+                            placeholder="••••••••"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                            class="toggle-password"
+                            aria-label="Mostrar contraseña"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+
+                    <!-- ==================================
+                         TURNSTILE
+                    =================================== -->
+
+                    <div
+                        class="cf-turnstile"
+                        data-sitekey="0x4AAAAAAEZUYXHJYKOaceE_"
+                        data-theme="light"
+                    ></div>
+
+
+                    <!-- ==================================
+                         CREAR CUENTA
+                    =================================== -->
+
+                    <button
+                        class="login-button"
+                        id="registerButton"
+                        type="submit"
+                    >
+                        Crear cuenta
+                    </button>
+
+
+                    <!-- ==================================
+                         INICIAR SESIÓN
+                    =================================== -->
+
+                    <p class="signup-text">
+
+                        ¿Ya tienes una cuenta?
+
+                        <a href="/login.html">
+                            Iniciar sesión
+                        </a>
+
+                    </p>
+
+
+                    <!-- ==================================
+                         BOTONES SOCIALES
+                         HORIZONTALES
+                    =================================== -->
+
+                    <div class="social-buttons">
+
+                        <!-- GOOGLE -->
+
+                        <button
+                            type="button"
+                            class="social-button"
+                            id="googleRegister"
+                            aria-label="Continuar con Google"
+                            title="Continuar con Google"
+                        >
+
+                            <img
+                                src="img/googlelogo.webp"
+                                alt="Google"
+                                class="social-logo"
+                            >
+
+                        </button>
+
+
+                        <!-- DISCORD -->
+
+                        <button
+                            type="button"
+                            class="social-button"
+                            id="discordRegister"
+                            aria-label="Continuar con Discord"
+                            title="Continuar con Discord"
+                        >
+
+                            <img
+                                src="img/discordlogo.png"
+                                alt="Discord"
+                                class="social-logo"
+                            >
+
+                        </button>
+
+
+                        <!-- GITHUB -->
+
+                        <button
+                            type="button"
+                            class="social-button"
+                            id="githubRegister"
+                            aria-label="Continuar con GitHub"
+                            title="Continuar con GitHub"
+                        >
+
+                            <img
+                                src="img/githublogo.png"
+                                alt="GitHub"
+                                class="social-logo"
+                            >
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- ==================================
+                         INVITADO
+                    =================================== -->
+
+                    <a
+                        href="/chat.html"
+                        class="guest-button"
+                    >
+                        Continuar sin cuenta →
+                    </a>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             PANEL DERECHO
+        =================================== -->
+
+        <section class="visual-panel">
+
+            <div class="visual-background"></div>
+
+            <div class="visual-content">
+
+                <div class="nexix-symbol">
+                    ✦
+                </div>
+
+                <h2>
+                    Bienvenido a
+                    <br>
+                    NEXIX.
+                </h2>
+
+                <p>
+                    Crea tu cuenta y disfruta de
+                    una experiencia personalizada
+                    con NEXIX AI.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================
+         JAVASCRIPT
+    =================================== -->
+
+    <script src="register.js"></script>
+
+</body>
+
+</html>
+

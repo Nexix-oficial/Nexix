@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXIX AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            NEXIX
+        </div>
+
+        <button class="new-chat" id="newChat">
+            ＋ Nuevo chat
+        </button>
+
+        <div class="history">
+            <p>Chats recientes</p>
+
+            <button>Conversación nueva</button>
+            <button>Ideas para mi web</button>
+            <button>Ayuda con programación</button>
+        </div>
+
+        <div class="sidebar-bottom">
+            <button>
+                ⚙️ Configuración
+            </button>
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+            <strong>NEXIX AI</strong>
+
+            <button type="button">
+                •••
+            </button>
+        </header>
+
+
+        <section class="chat" id="chat">
+
+            <div class="welcome" id="welcome">
+
+                <h1>
+                    ¿En qué puedo ayudarte?
+                </h1>
+
+                <p>
+                    Pregunta lo que quieras a NEXIX AI.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <div class="input-area">
+
+            <div class="input-box">
+
+                <button
+                    class="plus"
+                    id="plusButton"
+                    type="button">
+                    ＋
+                </button>
+
+
+                <div
+                    class="command-menu"
+                    id="commandMenu">
+
+                    <button
+                        class="command-item"
+                        id="generateImageCommand"
+                        type="button">
+
+                        <span class="command-icon">
+                            🎨
+                        </span>
+
+                        <span class="command-text">
+                            <strong>Generar imagen</strong>
+                            <small>
+                                Crea una imagen con NEXIX
+                            </small>
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="command-item"
+                        id="analyzeImageCommand"
+                        type="button">
+
+                        <span class="command-icon">
+                            🖼️
+                        </span>
+
+                        <span class="command-text">
+                            <strong>Analizar imagen</strong>
+                            <small>
+                                Analiza una imagen
+                            </small>
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="command-item"
+                        id="attachFileCommand"
+                        type="button">
+
+                        <span class="command-icon">
+                            📎
+                        </span>
+
+                        <span class="command-text">
+                            <strong>Adjuntar archivo</strong>
+                            <small>
+                                Añade un archivo al chat
+                            </small>
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="command-item"
+                        id="newChatCommand"
+                        type="button">
+
+                        <span class="command-icon">
+                            💬
+                        </span>
+
+                        <span class="command-text">
+                            <strong>Nuevo chat</strong>
+                            <small>
+                                Empieza una conversación nueva
+                            </small>
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                    hidden
+                >
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    hidden
+                >
+
+
+                <textarea
+                    id="message"
+                    placeholder="Escribe un mensaje..."
+                    rows="1"></textarea>
+
+
+                <button
+                    class="send"
+                    id="send"
+                    type="button">
+                    ↑
+                </button>
+
+            </div>
+
+
+            <p class="disclaimer">
+                NEXIX AI puede cometer errores.
+                Comprueba la información importante.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
