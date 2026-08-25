@@ -1,9 +1,17 @@
+# index.html
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="google-site-verification"
+        content="3YZEuvHw34DMSkTbmxVF-A02YncN-MSNlgYI2EhB1d4"
+    >
 
     <title>NEXIX AI</title>
 
@@ -32,12 +40,12 @@
         <div class="nav-buttons">
 
             <a class="login" href="/login.html">
-    Iniciar sesión
-</a>
+                Iniciar sesión
+            </a>
 
-<a class="signup" href="/register.html">
-    Crear cuenta
-</a>
+            <a class="signup" href="/register.html">
+                Crear cuenta
+            </a>
 
         </div>
 
@@ -346,49 +354,54 @@
 
     </footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("=== DEBUG NEXIX INICIO ===");
+    <!-- DEBUG -->
 
-    const botones = document.querySelectorAll("button, a");
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Elementos encontrados:", botones.length);
+        console.log("=== DEBUG NEXIX INICIO ===");
 
-    botones.forEach((elemento, index) => {
+        const botones = document.querySelectorAll("button, a");
 
-        console.log(
-            index,
-            "TAG:", elemento.tagName,
-            "ID:", elemento.id,
-            "CLASS:", elemento.className,
-            "TEXTO:", elemento.textContent.trim(),
-            "HREF:", elemento.getAttribute("href")
-        );
+        console.log("Elementos encontrados:", botones.length);
 
-        elemento.addEventListener("click", () => {
+        botones.forEach((elemento, index) => {
 
             console.log(
-                "CLICK DETECTADO:",
-                elemento.tagName,
-                elemento.id,
-                elemento.textContent.trim()
+                index,
+                "TAG:", elemento.tagName,
+                "ID:", elemento.id,
+                "CLASS:", elemento.className,
+                "TEXTO:", elemento.textContent.trim(),
+                "HREF:", elemento.getAttribute("href")
             );
+
+            elemento.addEventListener("click", () => {
+
+                console.log(
+                    "CLICK DETECTADO:",
+                    elemento.tagName,
+                    elemento.id,
+                    elemento.textContent.trim()
+                );
+
+            });
 
         });
 
+        const crearCuenta =
+            document.getElementById("registerButton");
+
+        const iniciarSesion =
+            document.getElementById("loginButton");
+
+        console.log("Botón Crear cuenta:", crearCuenta);
+        console.log("Botón Iniciar sesión:", iniciarSesion);
+
     });
+    </script>
 
-    const crearCuenta =
-        document.getElementById("registerButton");
-
-    const iniciarSesion =
-        document.getElementById("loginButton");
-
-    console.log("Botón Crear cuenta:", crearCuenta);
-    console.log("Botón Iniciar sesión:", iniciarSesion);
-
-});
-</script>
 </body>
 </html>
+```
